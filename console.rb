@@ -42,10 +42,15 @@ ticket1.save
 # customer1.name = "Tegan Gallacher"
 # customer1.update
 
-customers = Customer.all
-films = Film.all
-tickets = Ticket.all
+# customers = Customer.all
+# films = Film.all
+#tickets = Ticket.all
 
 
-binding.pry
-nil
+tickets = customer1.tickets()
+
+tickets.map { |ticket| puts ticket.customer.name() + " is going to watch " + ticket.film.title}
+
+
+# binding.pry
+# nil
